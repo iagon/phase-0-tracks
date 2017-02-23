@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order your favorite Beer!!</title>
+</head>
+<body>
+
+<form name="Beer" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>Your name:</label>
+      <input type="text" name="fullname">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+  </fieldset>
+
+  <fieldset>
+     <div>
+      <label>Beer Types:</label>
+      <select name="beer">
+        <option value="Racer">Racer</option>
+        <option value="Pizza Port">Pizza Port</option>
+        <option value="Stone Brewery">Stone Brewery</option>
+      </select>
+    </div>
+    <div>
+      <label>Is it ok to drink and drive?</label>
+      <input type="checkbox" name="Answer" value="Yes" /> Yes
+      <input type="checkbox" name="Answer" value="No"/> No
+    </div>
+
+    <div>    
+      <label>Choose a date:</label>
+      <input type="date" name="date">
+    </div>
+
+
+  </fieldset>
+  <textarea rows="3" cols="40" name="comment" form="usrform">
+Enter address here...</textarea>
+  <br>
+  <button type="submit">Order your beer</button>
+
+</form>
+
+</body>
+</html>
+
