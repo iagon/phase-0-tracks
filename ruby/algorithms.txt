@@ -1,0 +1,29 @@
+Elevator for Robot
+- Set value for desired floor
+- Move to elevator door on current floor
+- If desired floor value is below current floor value press bottom button
+- Otherwise press top button
+- Wait for elevator doors to open
+- Move through open elevator doors until clear of doors
+- Turn clockwise 180 degrees
+- Locate buttons
+- If button equals desired floor value press button
+- Wait until doors close
+- Until doors open enjoy the ride
+- If doors do not open press red button
+- Otherwise move through doors to desired floor
+
+Brushing teeth
+- Enter bathroom
+- Identify toothbrush
+- Identify toothpaste
+- Identify sink
+- Move to sink
+- If toothbrush clean put toothpaste on toothbrush bristles
+- Otherwise rinse toothbrush under water then put toothpaste on toothbrush bristles
+- Put toothbrush bristles in mouth
+- Until all teeth are cleaned move hand gently in circles
+- If mouth fills with toothpaste spit excess in sink
+- When all teeth are clean rinse toothbrush under water
+- Smile
+ 
