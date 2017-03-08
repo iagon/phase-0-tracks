@@ -1,7 +1,5 @@
-def employee_eval()
-
-  puts "What is your name?"
-    name = gets.chomp
+puts "What is your name?"
+    name = gets.chomp.downcase
   puts "How old are you? What year were you born? (age,year)"
     age = gets.chomp
     age = age.split(',').map {|x,y| x.to_i y.to_i}
@@ -18,45 +16,36 @@ def employee_eval()
   puts "Would you like to enroll in the company's health insurance? (yes/no)"
     health = gets.chomp
   
-  
-  if (age) && (gb == "yes" || health == "yes")
-    puts "Probably not a Vampire."
-  elsif (age) && (gb != "yes" || health != "yes")
-    puts "Probably a vampire."
-  elsif (age) && (gb != "yes" && health != "yes")
-    puts "Almost certainly a vampire"
-  elsif name == "Drake Cula"
-    puts "Definitely a vampire"
-  elsif name == "Tu Fang"
-    puts "Definitely a vampire"
     
-  end
-end
-
-puts employee_eval()
-
-
-
-
-
-
-
-
-
-
-=begin def string_add(string)
-  arr = string.split(',').map {|i| Integer(i) }
-  if arr[0] + arr[1] != 2017
-    puts "liar"
-  else
-    puts "cookies"
+  if age && (gb == "yes" || health == "yes")
+    is_vamp = "Probably not a Vampire."
+    is_vamp = is_vamp
+  end 
+  
+  if !age && (gb != "yes" || health != "yes")
+    is_vamp = "Probably a vampire."
+    is_vamp = is_vamp
   end
   
+  if !age && (gb != "yes" && health != "yes")
+    is_vamp = "Almost certainly a vampire"
+    is_vamp = is_vamp
+  end
+  
+  if  name == "drake cula" 
+    is_vamp = "Definitely a vampire"
+    is_vamp = is_vamp
+  elsif name == "tu fang"
+    is_vamp = "Definitely a vampire"
+    is_vamp = is_vamp
+  end
+
+if is_vamp != is_vamp
+   puts "Results inconclusive"
 end
 
-puts string_add("9,2008") 
-=end
 
+puts is_vamp
 
 
 
