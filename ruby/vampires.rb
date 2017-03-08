@@ -1,8 +1,14 @@
-puts "What is your name?"
+puts "How many employees will be processed:"
+  processed = gets.chomp.to_i
+  
+  i=0 
+  while i < processed
+
+  puts "What is your name?"
     name = gets.chomp.downcase
   puts "How old are you? What year were you born? (age,year)"
     age = gets.chomp
-    age = age.split(',').map {|x,y| x.to_i y.to_i}
+    age = age.split(',').map {|x| x.to_i}
     age = age[0] + age[1]
      if age == 2016
        age = TRUE
@@ -16,7 +22,7 @@ puts "What is your name?"
   puts "Would you like to enroll in the company's health insurance? (yes/no)"
     health = gets.chomp
   
-    
+     is_vamp = is_vamp
   if age && (gb == "yes" || health == "yes")
     is_vamp = "Probably not a Vampire."
     is_vamp = is_vamp
@@ -41,11 +47,11 @@ puts "What is your name?"
   end
 
 if is_vamp != is_vamp
-   puts "Results inconclusive"
+   is_vamp = "Results inconclusive"
 end
-
-
-puts is_vamp
-
+puts is_vamp 
+ 
+ i += 1
+end
 
 
