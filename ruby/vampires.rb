@@ -21,8 +21,8 @@ puts "How many employees will be processed:"
     gb = gets.chomp
   puts "Would you like to enroll in the company's health insurance? (yes/no)"
     health = gets.chomp
-  
-     is_vamp = is_vamp
+
+    is_vamp = is_vamp
   if age && (gb == "yes" || health == "yes")
     is_vamp = "Probably not a Vampire."
     is_vamp = is_vamp
@@ -46,12 +46,25 @@ puts "How many employees will be processed:"
     is_vamp = is_vamp
   end
 
-if is_vamp != is_vamp
-   is_vamp = "Results inconclusive"
+#if is_vamp != is_vamp
+  # is_vamp = "Results inconclusive"
+#end
+ puts "Please name allergies one at a time, when finished type 'done'."
+  allergies  = gets.chomp.downcase
+  
+ until allergies == "done" do
+  puts "Please name allergies one at a time, when finished type 'done'."
+   allergies  = gets.chomp.downcase
+  if allergies == "sunshine" then 
+     is_vamp = "Probably a vampire"
+     break
+  end
 end
-puts is_vamp 
  
- i += 1
+puts is_vamp
+
+i += 1
 end
+
 
 
