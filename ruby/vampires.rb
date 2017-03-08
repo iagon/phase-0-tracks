@@ -6,9 +6,10 @@ puts "How many employees will be processed:"
 
   puts "What is your name?"
     name = gets.chomp.downcase
-  puts "How old are you? What year were you born? (age,year)"
+  puts "How old are you? What year were you born?: (age,year)"
     age = gets.chomp
-    age = age.split(',').map {|x| x.to_i}
+# Used google to help get this result. Split the string array at ",". Then for each element do |var| which is set to.i
+    age = age.split(',').each {|x| x.to_i}
     age = age[0] + age[1]
      if age == 2016
        age = TRUE
@@ -50,7 +51,7 @@ puts "How many employees will be processed:"
   end
 
 
-  allergies  = " "
+  allergies  = ""
   
  until allergies == "done" do
   puts "Please name allergies one at a time, when finished type 'done'."
@@ -66,5 +67,5 @@ puts is_vamp
 i += 1
 end
 
-
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
