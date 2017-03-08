@@ -18,39 +18,39 @@ puts "How many employees will be processed:"
        age = FALSE
     end
   puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes/no)"
-    gb = gets.chomp
+  g_bread = gets.chomp
+    while g_bread != "yes" && g_bread != "no"
+    puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes/no)"
+    g_bread = gets.chomp
+    end
+
   puts "Would you like to enroll in the company's health insurance? (yes/no)"
     health = gets.chomp
+    while health != "yes" && health != "no"
+    puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes/no)"
+    garlic_bread = gets.chomp
+    end
 
-    is_vamp = is_vamp
-  if age && (gb == "yes" || health == "yes")
+    is_vamp = "Results Inconclusive"
+  
+  if age && (g_bread == "yes" || health == "yes")
     is_vamp = "Probably not a Vampire."
-    is_vamp = is_vamp
   end 
   
-  if !age && (gb != "yes" || health != "yes")
+  if !age && (g_bread != "yes" || health != "yes")
     is_vamp = "Probably a vampire."
-    is_vamp = is_vamp
   end
   
-  if !age && (gb != "yes" && health != "yes")
+  if !age && (g_bread != "yes" && health != "yes")
     is_vamp = "Almost certainly a vampire"
-    is_vamp = is_vamp
   end
   
-  if  name == "drake cula" 
+  if  name == "drake cula" || name == "tu fang"
     is_vamp = "Definitely a vampire"
-    is_vamp = is_vamp
-  elsif name == "tu fang"
-    is_vamp = "Definitely a vampire"
-    is_vamp = is_vamp
   end
 
-#if is_vamp != is_vamp
-  # is_vamp = "Results inconclusive"
-#end
- puts "Please name allergies one at a time, when finished type 'done'."
-  allergies  = gets.chomp.downcase
+
+  allergies  = " "
   
  until allergies == "done" do
   puts "Please name allergies one at a time, when finished type 'done'."
