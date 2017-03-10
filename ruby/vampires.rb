@@ -11,16 +11,14 @@ name = gets.chomp.downcase
 
 puts "How old are you? What year were you born? (age,year)"
 age = gets.chomp
-=begin Used google to help get this result. First Split the string array at "," to make an array. 
+=begin Used google to help get this result. First Split the string at "," to make an array. 
 Originally I tried .each method, but it didn't have intended effect. From what I gathered 
 map/collect will make a new array (map! will change original), while each just runs every 
 element array in through |var|. 
 =end 
  age = age.split(',').map {|x| x.to_i}
  age = age[0] + age[1]
-   if age == 2016
-      age = TRUE
-    elsif age == 2017
+   if age == 2016 || age == 2017
       age = TRUE
     else
       age = FALSE
