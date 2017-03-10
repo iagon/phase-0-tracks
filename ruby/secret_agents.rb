@@ -21,8 +21,8 @@ return new_string
 
 end
 
-puts encrypt("bcd")
-puts encrypt("zed")
+# puts encrypt("abc")
+# puts encrypt("zed")
 
 # Input a string
 # Create variable containing empty string
@@ -51,5 +51,35 @@ return new_string
 
 end
 
-puts decrypt("bcd")
-puts decrypt("afe")
+# puts decrypt("bcd")
+# puts decrypt("afe")
+# puts decrypt(encrypt("swordfish"))
+
+# Methods were individually defined. Calling encrypt returned the string correctly, decrypt then reversed the returned string.
+
+
+# Request user feedback on if they would like to perform decrypt of encrypt for password.
+# Ask for password
+# Run requested method and print result to screen and end program.
+
+puts "Would you like to decrypt or encrypt a password? Answer [encrypt/decrypt]:"
+ method = gets.chomp.downcase
+puts "What is the password?"
+ password = gets.chomp
+if method == "encrypt"
+  puts encrypt("#{password}")
+elsif method == "decrypt"
+  puts decrypt("#{password}")
+else
+  puts "Please answer encrypt or decrypt"
+end
+
+
+
+
+
+
+
+
+
+
