@@ -16,13 +16,13 @@
 "enhance".center(15)
 # => "    enhance    "
 
-
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 
 "the usual".+" suspects"
 "the usual".insert(9, " suspects")
+"the usual" << " suspects"
 #=> "the usual suspects"
 
 
@@ -31,11 +31,13 @@
 # => "the usual suspects"
 
 "The case of the disappearing last letter".slice(0...-1)
+"The case of the disappearing last letter".chop
 "The case of the disappearing last letter"[0..-2]
 # => "The case of the disappearing last lette"
 
 "The mystery of the missing first letter".slice(1..-1)
 "The mystery of the missing first letter"[1..-1]
+"The mystery of the missing first letter".delete("T")
 # => "he mystery of the missing first letter"
 
 "Elementary,    my   dear        Watson!".squeeze
