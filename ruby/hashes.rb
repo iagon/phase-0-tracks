@@ -34,10 +34,23 @@ puts "Would you like to make any changes to your form? (yes/no)"
   update = gets.chomp.downcase == "yes"
   if update
     puts "What value would you like to update?"
-      p form.values
+      p form.keys
       form_key = gets.chomp.downcase
-  if form_key == "name"
-    puts "What do you want name to be changed to?"
-    form[:name] = gets.chomp
+    if form_key == "name"
+      puts "What do you want name to be changed to?"
+      form[:name] = gets.chomp
+    elsif form_key == "age"
+      form[:age] = gets.chomp
+    elsif form_key == "size"
+      form[:size] = gets.chomp
+    elsif form_key == "children"
+      form[:children] = gets.chomp
+    elsif form_key == "decor_theme"
+      form[:decor_theme] = gets.chomp
+    elsif form_key == "budget"
+      form[:budget] = gets.chomp
+    elsif form_key == "information"
+      form[:information] = gets.chomp
+    end
   end
-  end
+end
