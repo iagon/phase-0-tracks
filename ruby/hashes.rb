@@ -11,7 +11,7 @@ puts "How many children do you have?"
 puts "Preferred decor theme style?"
   decor_theme = gets.chomp
 puts "Are you on a budget? (yes/no)"
-  budget = gets.chomp == "yes"
+  budget = gets.chomp.downcase == "yes"
 puts "Any additional information:"
   information = gets.chomp
 
@@ -28,3 +28,16 @@ form = {
 
 # Print clients initial inputs
 p form
+
+# Ask if they would like update their form.
+puts "Would you like to make any changes to your form? (yes/no)"
+  update = gets.chomp.downcase == "yes"
+  if update
+    puts "What value would you like to update?"
+      p form.values
+      form_key = gets.chomp.downcase
+  if form_key == "name"
+    puts "What do you want name to be changed to?"
+    form[:name] = gets.chomp
+  end
+  end
