@@ -19,7 +19,7 @@ actors_and_movies = {
   goldeneye: "Pierce Brosnan"
 }
 
-# Print array
+
 p cities
 
 # Call each and map! on array
@@ -27,7 +27,7 @@ cities.each {|x| puts x.upcase}
 
 cities.map! {|x| puts x * 2}
 
-# Print hash
+
 p actors_and_movies
 
 # Call each on hash
@@ -35,8 +35,10 @@ actors_and_movies.each {|movie, actor| puts "#{movie.upcase} starred #{actor}" }
 
 # Release 2 
 
+# Create array of alphabet letters
  letters = ("a".."z").to_a
 
+# Create hash with keys corresponding to integer values.
  numbers_spelled = {
   one: 1,
   two: 2,
@@ -52,7 +54,7 @@ p letters.delete_if {|del| del < "m" }
 p numbers_spelled.delete_if {|num, value| value > 3}
 
 
-# Get fresh array
+# Get fresh array & hash
 letters = ("a".."z").to_a
 
  numbers_spelled = {
@@ -64,7 +66,7 @@ letters = ("a".."z").to_a
  }
 
 
-#2 Select o, u / select 3 from hash
+#2 Select a,e,i,o,u / select 3 from hash
 p letters.select {|letter| letter =~ /[aeiou]/ }
 
 p numbers_spelled.select {|num, value| value == 3 }
@@ -75,7 +77,7 @@ p letters.keep_if {|letter| letter < "g" && letter > "b"}
 
 p numbers_spelled.keep_if {|num, value| value < 3 }
 
-# Get fresh array
+# Get fresh array & hash
 letters = ("a".."z").to_a
 
  numbers_spelled = {
