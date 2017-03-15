@@ -32,25 +32,33 @@ p form
 # Ask if they would like update their form.
 puts "Would you like to make any changes to your form? (yes/no)"
   update = gets.chomp.downcase == "yes"
-  if update
+  if update == FALSE
+    puts "Thanks for filling out this survey!"
+  else  
     puts "What value would you like to update?"
-      p form.keys
-      form_key = gets.chomp.downcase
+    p "name | age | size | children | decor | budget | information |"
+    form_key = gets.chomp.downcase
     if form_key == "name"
       puts "What do you want name to be changed to?"
       form[:name] = gets.chomp
     elsif form_key == "age"
+      puts "What do you want age to be changed to?"
       form[:age] = gets.chomp
     elsif form_key == "size"
+      puts "What do you want size to be changed to?"
       form[:size] = gets.chomp
     elsif form_key == "children"
+      puts "What do you want children to be changed to?"
       form[:children] = gets.chomp
-    elsif form_key == "decor_theme"
+    elsif form_key == "decor"
+      puts "What do you want decor to be changed to?"
       form[:decor_theme] = gets.chomp
     elsif form_key == "budget"
+      puts "What do you want budget to be changed to?"
       form[:budget] = gets.chomp
-    elsif form_key == "information"
+    else form_key == "information"
+      puts "What do you want information to be changed to?"
       form[:information] = gets.chomp
     end
-  end
-end
+  p form
+ end
