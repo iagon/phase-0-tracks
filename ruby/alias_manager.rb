@@ -9,11 +9,11 @@
 =end
  
 # I used the tr method. I'm not sure if this is cheating for this exercise. 
-# Below the program I will comment out an example of how to iterate without a helper method.
+# Below the program I will comment out an example of the program without tr. 
 
 def flip_string(str)
-  arr = str.split
-  arr.reverse.join(" ")
+  name_change = str.split
+  name_change.reverse.join(" ")
 end
 
 def vowel_change(str)
@@ -41,4 +41,47 @@ end
 
 created_names.each { |old_name, spy_name| puts "Your #{old_name} is actually #{spy_name(old_name)}." }
 
+=begin
+def flip_string(str)
+  name_change = str.split
+  name_change.reverse.join(" ")
+end
+# change vowels
+def vowel_switch(name_flipped)
+  name_change = name_flipped.downcase.chars
+  vowels = 'aeiou'
+  name_change.map! do |letter| # Edge Case
+    if letter == "u"
+      letter = "a"
+    elsif 
+      vowels.include?(letter)
+        vowels[vowels.index(letter) + 1]
+    else
+      letter
+    end
+  end
+  name_change.join('').split.map(&:capitalize).join(' ') # recapitlalize letters
+end
 
+# change consonants
+def consonant_switch(name_flipped)
+  name_change = name_flipped.downcase.chars
+  consonants = 'bcdfghjklmnpqrstvwxyz'
+  name_change.map! do |letter| # Edge Case
+    if letter == "z"
+      letter = "b"
+    elsif 
+      consonants.include?(letter)
+        consonants[consonants.index(letter) + 1]
+    else
+      letter
+    end
+  end
+  name_change.join('').split.map(&:capitalize).join(' ') # recapitlalize letters
+end
+
+
+p consonant_switch(vowel_switch(flip_string("Felicia Torres")))
+# Will return "Vussit Gimodoe"
+
+=end
