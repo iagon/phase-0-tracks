@@ -5,5 +5,24 @@ class Puppy
     toy
   end
 
+  def speak(int)
+    int.times {puts "Woof!"}
+  end
+
+
+
+
+
+
+
+
+
 end
+
+
+
+p Puppy.new.fetch("rubber")
+p Puppy.new.speak(3)
+
+
 
