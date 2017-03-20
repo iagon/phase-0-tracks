@@ -6,12 +6,22 @@ class Puppy
   end
 
   def speak(int)
-    int.times {puts "Woof!"}
+    int.times do 
+      puts "Woof!"
+   end
   end
 
+  def roll_over
+    p "rolls over"
+  end
 
+  def dog_years(int)
+    p int * 7
+  end
 
-
+  def shake 
+    p "Extends paw to shake"
+  end
 
 
 
@@ -21,8 +31,11 @@ end
 
 
 
-p Puppy.new.fetch("rubber")
-p Puppy.new.speak(3)
+Puppy.new.fetch("rubber")
+Puppy.new.speak(2)
+Puppy.new.roll_over
+Puppy.new.dog_years(5)
+Puppy.new.shake
 
 
 
