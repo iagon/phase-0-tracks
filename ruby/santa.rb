@@ -60,6 +60,6 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 150.times do |i|
   santa_create = Santa.new(example_genders.sample, example_ethnicities.sample)
   santa_create.age = rand(0..140)
-  puts "Santa number #{i}: is #{santa_create.age} years old and identifies as a #{santa_create.gender}, #{santa_create.ethnicity}."
+  puts "Santa # #{i}: is #{santa_create.age} years old and identifies as a #{santa_create.ethnicity}, #{santa_create.gender}."
 
 end
