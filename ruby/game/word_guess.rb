@@ -41,12 +41,14 @@ class WordGame
 
   def lose
     if @total_guesses == 0
-    p "Nope, better luck next time sucker."
+    p "No match! Better luck next time sucker."
     @is_over = TRUE
     end
   end
 
 end
+
+# Driver
 
 p "This is a word guessing game."
 p "The first person will choose a word and the second will try to guess it."
@@ -61,9 +63,9 @@ p "The word is #{game.master_word.length} letters long. You have #{game.total_gu
 
 until game.win || game.lose
   p "Please choose a letter:"
+  p "You have #{game.total_guesses} guesses remaining."
   letter = gets.chomp
   game.guess(letter)
-  p "You have #{game.total_guesses} guesses remaining."
 end
 
 
