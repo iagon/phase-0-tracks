@@ -1,3 +1,29 @@
+=begin
+Method for format:
+Store a word inputted from the first user.(The second user will try to guess word) 
+Number of guesses will be bound by word length plus arbitrary number
+Repeated guesses will not count against user
+Format guessed letters to account for word length represented by ‘_’
+Create structure to store letter guesses
+
+Method for guesses:
+Input will be a letter 
+Check if letter is in word
+Locate letter by index 
+Store letter in guessed letters representation at proper index
+Show guessed letters status
+Add letter to structure containing letter guesses
+If letter isn’t in letter guesses, decrease number of guesses by 1
+
+Method for win:
+If guessed letters match word, print congratulatory message
+
+Method for loss:
+If number of guesses equals 0, print taunting message
+=end
+
+
+
 class WordGame
   attr_reader :total_guesses, :letter_guess, :master_word, :is_over
   
