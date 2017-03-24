@@ -40,8 +40,7 @@ class WordGame
   def guess(letter)
     if @past_guess.include?(letter)
         puts "That letter has already been guessed."
-    end
-    if @master_arr.include?(letter)
+    elsif @master_arr.include?(letter)
        @master_arr.each_with_index do |char, index| # Originally used delete_at and insert but had trouble with words with multiple instances of a letter
         if char == letter
           @letter_guess[index] = char
@@ -50,12 +49,13 @@ class WordGame
        @letter_guess.join(' ')
        p "Letter match! Updated board:"
        p @letter_guess.join(' ')
+       @total_guesses -= 1
     else 
       p "Nope, letter not included."
       p @letter_guess.join(' ')
+    @total_guesses -= 1
     end
     @past_guess << letter
-    @total_guesses -= 1
  end
   
   def win
@@ -93,9 +93,3 @@ until game.win || game.lose
   letter = gets.chomp
   game.guess(letter)
 end
-
-
-
-
-
-
