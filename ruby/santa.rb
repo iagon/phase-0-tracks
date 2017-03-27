@@ -24,7 +24,7 @@ def celebrate_birthday
 end
 
 def get_mad_at(reindeer_name)
-  @reindeer_ranking.remove(reindeer_name)
+  @reindeer_ranking.delete(reindeer_name)
   @reindeer_ranking << reindeer_name
 end
 
@@ -35,6 +35,7 @@ DRIVER CODE
 santa = Santa.new
 santa.speak
 santa.eat_milk_and_cookies("Peanut Butter")
+santa.get_mad_at("Dasher")
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
