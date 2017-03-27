@@ -9,7 +9,13 @@ var reverse = ""
 function reverseString(string) {
   for (var i = 0; i < string.length; i++)
   reverse = string[i] + reverse;
-  return reverse
+  return reverse;
 }
 
 var stringReversed = reverseString("hello");
+
+reverseWorks = true
+
+if (reverseWorks) {
+console.log(stringReversed);
+}
