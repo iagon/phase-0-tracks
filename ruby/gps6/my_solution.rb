@@ -96,3 +96,14 @@ end
 
 #=======================================================================
 # Reflection Section
+=begin
+1.) The hash uses two different assignment techniques for key value pairs. The hash rocket =>, and symbol:.
+2.) Require relative can provide access from current directory, whereas require is only from root directory
+3.) Iteration techniques .each and .map are the most common. They have many variations i.e each_with_index.
+    iteration can also be done by setting conditional loop.
+4.) The variables used were instance variables. Because of this their scope was throughout the class
+    and we could refactor without referencing/setting them.
+5.) I most solidified the use of private for methods. Also trying to create methods with single responsibilities. 
+  
+
+=end
