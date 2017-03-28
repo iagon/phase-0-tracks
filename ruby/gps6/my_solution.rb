@@ -18,8 +18,6 @@ class VirusPredictor
     @population_density = population_density
   end
 
-
-
 #calls 2 methods 
   def virus_effects
     print "#{@state} will lose #{number_of_predicted_deaths} people in this outbreak"
@@ -77,20 +75,20 @@ end
 
 
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
+  alabama.virus_effects
 
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+  jersey.virus_effects
 
 california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
+  california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
+  alaska.virus_effects
 
 STATE_DATA.each do |state, info_hash|
-state = VirusPredictor.new(state, info_hash[:population_density], info_hash[:population])
-state.virus_effects
+  state = VirusPredictor.new(state, info_hash[:population_density], info_hash[:population])
+  state.virus_effects
 end
 
 
@@ -103,7 +101,6 @@ end
     iteration can also be done by setting conditional loop.
 4.) The variables used were instance variables. Because of this their scope was throughout the class
     and we could refactor without referencing/setting them.
-5.) I most solidified the use of private for methods. Also trying to create methods with single responsibilities. 
-  
-
+5.) Two concepts that were solidified were the use of private for methods and the idea of trying to create 
+    methods with single responsibility.
 =end
