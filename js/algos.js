@@ -17,16 +17,31 @@ function longestString(arr) {
   return longestAll;
 }
 
-// 
+// Write a function to compare two objects key value pairs 
+// Store keys from first hash in an array
+// Iterate over array holding keys, indexing each value 
+// Compare indexed values for keys in first hash to keys and index values of second
+// If match return true, otherwise return false
 
+function keyValueMatch(obj1, obj2){
+  var keysOfObject = []
+  for(var keys in obj1){ keysOfObject.push(keys) }
 
-
-
-
-
-
+  for(var i = 0; i < keysOfObject.length; i+=1){
+    if(obj1[keysOfObject[i]] == obj2[keysOfObject[i]]){
+      return true;
+    }
+  }
+      return false;
+}
 
 
 console.log(longestString(["Long", "Longest", "Longer", "Longer than the longest?"]));
 console.log(longestString(["Some", "Fun", "for all the", "cold ones"]));
 console.log(longestString([".", "..", ".......", "....","............."]));
+
+
+console.log(keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
+console.log(keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 24}));
+console.log(keyValueMatch({name: "Steven", age: 23, weight: 184}, {name: "Tamir", age: 24}));
+console.log(keyValueMatch({name: "Steven", age: 23, weight: 184}, {name: "Tamir", age: 24, weight: 184}));
