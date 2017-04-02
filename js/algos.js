@@ -35,6 +35,42 @@ function keyValueMatch(obj1, obj2){
       return false;
 }
 
+// Write a function that takes an integer and returns an array of that length
+// Create a variable to hold empty array
+// Iterate through while less then integer 
+// Create variables for an empty string, the alphabet and a random number between 1 and 10 
+// Create nested loop to iterate through while less than random number length
+// For iterations create random alphabet letters
+// Add a random alphabet letter to the empty string
+// Add new string to array
+// Return array filled new random words
+
+function randomString(int) {
+  var array = [];
+
+  for (var i = 0; i < int;  i+=1){
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var stringLength = Math.floor(Math.random() * 10) + 1;
+    var newString = "";
+
+    for (var alphaIdx = 0; alphaIdx < stringLength; alphaIdx+=1) {
+      var randLetter =  Math.floor(Math.random() * alphabet.length);
+          newString += alphabet[randLetter]
+        }
+      
+      array.push(newString)
+
+    }
+    return array;
+}
+
+
+
+
+
+
+
+
 
 console.log(longestString(["Long", "Longest", "Longer", "Longer than the longest?"]));
 console.log(longestString(["Some", "Fun", "for all the", "cold ones"]));
