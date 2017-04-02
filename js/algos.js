@@ -65,13 +65,6 @@ function randomString(int) {
 }
 
 
-
-
-
-
-
-
-
 console.log(longestString(["Long", "Longest", "Longer", "Longer than the longest?"]));
 console.log(longestString(["Some", "Fun", "for all the", "cold ones"]));
 console.log(longestString([".", "..", ".......", "....","............."]));
@@ -81,3 +74,10 @@ console.log(keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 console.log(keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 24}));
 console.log(keyValueMatch({name: "Steven", age: 23, weight: 184}, {name: "Tamir", age: 24}));
 console.log(keyValueMatch({name: "Steven", age: 23, weight: 184}, {name: "Tamir", age: 24, weight: 184}));
+
+for (var i = 0; i < 10; i+=1){
+  randomTest = Math.random() * 10;
+  var arrayRand = randomString(randomTest);
+  console.log(arrayRand);
+  console.log("The longest word of the randoms?:" + longestString(arrayRand));
+}
