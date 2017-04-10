@@ -1,7 +1,7 @@
 
 # A list of 10 randomly generated cars is given to the user
 # The user is asked to type the product number of the car they want
-# User is given contact info for person selling
+# Final output user is given contact information for seller
 
 # require gems
   require 'sqlite3'
@@ -23,5 +23,24 @@ create_table_cmd = <<-SQL
     )
   SQL
 
-# actually create the table 
 db.execute(create_table_cmd)
+
+# generate the car info
+def create_car_info (db, name, color, price, email, miles_away)
+  db.execute("INSERT INTO car_info(name, color, price, email, miles_away) VALUES (?, ?, ?, ?, ?)", [name, color, price, email, miles_away])
+end 
+
+
+# create cars in database
+10.times do 
+  create_car_info(db, Faker::Name.name, Faker::Color.color_name.upcase, Faker::Number.number(3), Faker::Internet.email, Faker::Number.between(1, 25) )
+end
+
+# setting the cars table as a hash and returning the cars ID and NAME 
+db.results_as_hash = true
+car_info = db.execute("SELECT * FROM car_info")
+
+
+
+
+
