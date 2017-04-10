@@ -33,12 +33,35 @@ end
 
 # create cars in database
 10.times do 
-  create_car_info(db, Faker::Name.name, Faker::Color.color_name.upcase, Faker::Number.number(3), Faker::Internet.email, Faker::Number.between(1, 25) )
+  create_car_info(db, Faker::Name.name, Faker::Color.color_name.upcase, Faker::Number.number(4), Faker::Internet.email, Faker::Number.between(1, 45) )
 end
 
 # setting the cars table as a hash and returning the cars ID and NAME 
 db.results_as_hash = true
 car_info = db.execute("SELECT * FROM car_info")
+
+
+# USER INTERFACE
+puts "***** Get a car and get on the road! Press ENTER for a list of car for sale near you. *****"
+continue = gets.chomp
+
+
+car_info.each do |car|
+  p "Car number: #{car['id']} || Color: #{car['color']} || Cost: $#{car['price']} || Located: #{car['miles_away']} miles away"
+end
+
+
+# ask user to choose the product number(based off of primary id) of the car they are interested in 
+print "Please type the product number of the car you are interested in to get the owner's contact info!"
+car_choice = gets.chomp 
+
+
+# provide contact info for car choice
+car_info.each do |con|
+  if car_choice.to_i == con['id']
+    print "#{con['color'].upcase} is a great choice! Email #{con['name']} at #{con['email']} for more details about the car!"
+  end
+end
 
 
 
