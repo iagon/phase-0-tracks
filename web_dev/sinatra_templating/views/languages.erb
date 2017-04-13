@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming languages</title>
+</head>
+<body>
+<h2>What languages do you want to learn?</h2>
+
+<form action="/languages" method="POST">
+    <input type="text" language="language" placeholder="language">
+    <button type="submit">Save</button>
+  </form>
+
+  <ul>
+    <% @languages.each do |language| %>
+      <li><%= language['languages'] %></li>
+    <% end %>
+  </ul>
+
+</body>
+</html>

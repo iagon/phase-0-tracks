@@ -5,6 +5,7 @@ require 'sqlite3'
 set :public_folder, File.dirname(__FILE__) + '/static'
 
 db = SQLite3::Database.new("students.db")
+db2 = SQLite3::Database.new("languages.db")
 db.results_as_hash = true
 
 # show students on the home page
@@ -30,4 +31,14 @@ end
 get '/campus/new' do
   @students = db.execute("SELECT * FROM students")
   erb :campus
+end
+
+get '/languages/new' do
+  @languages = db2.execute("SELECT * FROM languages")
+  erb :languages
+end
+
+post '/languages' do
+  db2.execute("INSERT INTO languages (language) VALUES (?)", [params['language']])
+  redirect '/'
 end
